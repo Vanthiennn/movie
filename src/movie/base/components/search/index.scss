@@ -1,0 +1,37 @@
+.search-bar {
+}
+
+.keyword {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 99;
+    top: 150%;
+    .content {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 0;
+        .ant-list-item{
+            padding: 12px 10px;
+            border-radius: 10px;
+        }
+        .item-search {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+        }
+        .item-search:hover {
+            background-color: #ccc;
+        }
+    }
+  
+    .hidden{
+        display: none;
+    }
+    // .ant-spin-nested-loading {
+    //     .ant-spin-container {
+
+    //     }
+    // }
+}

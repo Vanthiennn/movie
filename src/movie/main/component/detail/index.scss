@@ -1,0 +1,530 @@
+.main {
+    .background {
+        overflow: hidden;
+        height: 510px;
+        max-height: 510;
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            .width-80 {
+                width: 90%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 30px 0;
+                display: flex;
+                .image {
+                    min-width: 300px;
+                    width: 300px;
+                    height: 450px;
+                    overflow: hidden;
+                    border-radius: 8px;
+                }
+                .content {
+                    padding-left: 40px;
+                    margin-top: 40px;
+                    color: #fff;
+                    .title {
+                        margin-bottom: 24px;
+                        h2 {
+                            color: #fff;
+                            font-size: 30px;
+                            font-weight: bold;
+                            margin-bottom: 0;
+                            span {
+                                color: #ccc;
+                                font-weight: 400;
+                            }
+                        }
+                        .tags {
+                            span.certification {
+                                border: 1px solid rgba(255, 255, 255, 0.6);
+                                color: rgba(255, 255, 255, 0.6);
+                                padding: 0.06em 4px 0.15em 4px;
+                                border-radius: 2px;
+                                margin-right: 7px;
+                            }
+                            span.genres {
+                                span {
+                                    width: 5px;
+                                    height: 5px;
+                                    line-height: 1px;
+                                    background-color: #fff;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    margin: 0 5px;
+                                }
+                                a {
+                                    color: #fff;
+                                    font-weight: 600;
+                                    font-size: 17px;
+                                    transition: all 0.3s ease;
+                                }
+                            }
+                            span.dot {
+                                width: 5px;
+                                height: 5px;
+                                line-height: 1px;
+                                background-color: #fff;
+                                border-radius: 50%;
+                                display: inline-block;
+                                margin: 0 5px;
+                            }
+                        }
+                    }
+                    .action {
+                        ul {
+                            list-style: none;
+                            margin-bottom: 20px;
+                            width: 100%;
+                            height: 68px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            padding: 0;
+                            li {
+                                display: inline-block;
+                                margin-right: 20px;
+                            }
+                            .score {
+                                .percents {
+                                    width: 68px;
+                                    height: 68px;
+                                    .ant-progress-inner {
+                                        width: 100% !important;
+                                        height: 100% !important;
+                                        font-size: 10px !important;
+                                        background-color: #03142b;
+                                        .ant-progress-text {
+                                            color: #fff;
+                                            font-weight: bold;
+                                            font-size: 20px;
+                                        }
+                                        .ant-progress-circle-trail {
+                                            stroke: #03142b;
+                                        }
+                                        //
+                                    }
+                                }
+                            }
+                            .add {
+                                width: 46px;
+                                height: 46px;
+                                display: inline-flex;
+                                background-color: rgba(3, 37, 65);
+                                justify-content: center;
+                                align-items: center;
+                                align-content: center;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                            .checked {
+                                color: red;
+                            }
+                           .heart{
+                            background-color: #ef47b6;;
+                           }
+                        }
+                    }
+                    .info {
+                        .tagline {
+                            color: #ccc;
+                            font-style: italic;
+                            font-weight: 400;
+                            opacity: 0.7;
+                        }
+                        .crew {
+                            .gutter-row {
+                                padding: 10px 12px;
+                                a {
+                                    color: #fff;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        .width-80 {
+            width: 90%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px 0;
+            display: flex;
+
+            overflow: hidden;
+            .left_content {
+                .cast {
+                    padding: 30px 0;
+                    border-bottom: 1px solid #ccc;
+                    h3.title {
+                        font-size: 25px;
+                    }
+                    .animated {
+                        display: flex;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        max-height: 330px;
+                        height: 330px;
+                        .list-cast {
+                            .card {
+                                margin-left: 30px;
+                                width: 140px;
+                                min-width: 140px;
+                                .item {
+                                    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+                                    height: 310px;
+                                    overflow: hidden;
+                                    .name-cast {
+                                        color: #000;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                        .view-more {
+                            .wrapper {
+                                width: 140px;
+                                min-width: 140px;
+                                .d-flex {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 300px;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+                    .full-info {
+                        margin-top: 20px;
+                        a {
+                            color: #000;
+                            font-weight: 600;
+                            font-size: 17px;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+
+                .season {
+                    padding: 30px 0;
+                    border-bottom: 1px solid #ccc;
+                    h3.title {
+                        font-size: 25px;
+                    }
+                    .content {
+                        .wrapper {
+                            padding: 20px;
+                            box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+                            border-radius: 8px;
+                            width: 100%;
+                            border: 1px solid #ccc;
+                            .d-flex {
+                                display: flex;
+                                .content2 {
+                                    width: 100%;
+                                    padding: 20px;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .social {
+                    .review {
+                        padding: 30px 0;
+                        border-bottom: 1px solid #ccc;
+                        h3.title {
+                            font-size: 25px;
+                        }
+                        .content {
+                            .wrapper {
+                                padding: 20px;
+                                box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+                                border-radius: 8px;
+                                width: 100%;
+                                border: 1px solid #ccc;
+                                .d-flex {
+                                    display: flex;
+                                    // align-items: center;
+                                    .avatar {
+                                        margin-right: 20px;
+                                        .reviewer-avatar {
+                                            width: 100%;
+                                            border-radius: 50%;
+                                        }
+                                        .default-avatar {
+                                            width: 64px;
+                                            height: 64px;
+                                            line-height: 64px;
+                                            display: block;
+                                            text-align: center;
+                                            font-size: 20px;
+                                            color: #fff;
+                                            font-weight: 600;
+                                            border-radius: 50%;
+                                            background-color: palevioletred;
+                                        }
+                                    }
+                                    .comment {
+                                        width: 100%;
+                                        .info {
+                                            .d-flex {
+                                                display: flex;
+                                                align-items: center;
+                                                a {
+                                                    color: #000;
+                                                    font-weight: bold;
+                                                    font-size: 20px;
+                                                    transition: all 0.3s ease;
+                                                }
+                                                .rating {
+                                                    padding: 1px 8px;
+                                                    margin-left: 14px;
+                                                    font-size: 0.9em;
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    background-color: #000;
+                                                    border-color: #000;
+                                                    border-radius: 8px;
+                                                    color: #fff;
+                                                }
+                                            }
+                                            h5.author {
+                                                color: #abaaaa;
+                                            }
+                                        }
+                                        .content {
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .media {
+                    padding: 30px 0;
+                    border-bottom: 1px solid #ccc;
+                    h3 {
+                        font-size: 25px;
+                    }
+                    .tab {
+                        margin-left: 20px;
+                        .popular {
+                            display: flex;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            max-height: 330px;
+                            height: 330px;
+                            img {
+                                height: 300px;
+                            }
+                            .video {
+                                .wrapper {
+                                    width: 533px;
+                                    height: 300px;
+
+                                    a.play_trailer {
+                                        color: #fff;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        height: 100%;
+                                        .play_background {
+                                            width: 67px;
+                                            height: 67px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-radius: 50%;
+                                            background: rgba(0, 0, 0, 0.7);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right_content {
+                padding: 30px;
+
+                .social {
+                    margin-bottom: 30px;
+                    a {
+                        color: #000;
+                        font-size: 30px;
+                        margin-right: 10px;
+                        transition: all 0.3s ease;
+                    }
+                }
+                .info {
+                    p {
+                        margin: 0 0 20px 0;
+                        font-size: 15px;
+                        strong {
+                            display: block;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .key-words-detail {
+                    margin: 0 !important;
+                    h4 {
+                        font-size: 1.1em;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    .list-keywords {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        padding-bottom: 30px;
+                        .ant-col.ant-col-12 {
+                            padding: 0 !important;
+                            .item-keywords {
+                               
+                                overflow: hidden;
+                                background-color: rgba(0, 0, 0, 0.1);
+                                border: 1px solid #d7d7d7;
+                                margin-right: 10px;
+                                margin-bottom: 10px;
+                                padding: 6px 0px;
+                                text-align: center;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                height: 60px;
+                                &:hover {
+                                    opacity: 0.6;
+                                }
+                                a {
+                                    color: #000;
+                                    transition: all 0.3s ease;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a:hover {
+        opacity: 0.6;
+    }
+}
+
+.fullCast {
+    .breadcrumb {
+        background-color: rgb(57 38 38);
+        .wrapper {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            .image-poster {
+                padding: 10px;
+                img {
+                    width: 100%;
+                    height: 87px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+            .title-movie {
+                padding-left: 25px;
+                h3 {
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    span {
+                        color: #d9d9d9;
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+                }
+                a {
+                    color: #abaaaa;
+                    font-size: 17px;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+    .w-90 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .content {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 0;
+            .cast,
+            .crew {
+                width: 50%;
+            }
+            .cast h3.series-cast,
+            .crew h3.series-crew {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .cast h3.series-cast span,
+            .crew h3.series-crew span {
+                opacity: 0.6;
+            }
+
+            .crew .job,
+            .cast {
+                .item {
+                    margin-bottom: 10px;
+                    .wrapper {
+                        display: flex;
+                        align-items: center;
+                        .image {
+                            width: 66px;
+                            min-width: 66px;
+                            cursor: pointer;
+                            img {
+                                width: 100%;
+                                height: 66px;
+                                object-fit: cover;
+                                border-radius: 8px;
+                            }
+                        }
+                        .detail {
+                            padding-left: 15px;
+                            .name-cast {
+                                color: #000;
+                                font-weight: bold;
+                            }
+                            p {
+                                margin-bottom: 0;
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

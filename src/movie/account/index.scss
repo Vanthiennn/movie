@@ -1,0 +1,206 @@
+.profile {
+    .w-90 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .background_info {
+        .wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 50px 0;
+            .info {
+                padding: 20px 40px;
+                display: flex;
+                align-items: center;
+                .avatar {
+                    background-color: green;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    p {
+                        text-align: center;
+                        line-height: 150px;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 75px;
+                    }
+                }
+                .info-email {
+                    color: #fff;
+                    .email {
+                        font-weight: 500;
+                        font-size: 30px;
+                        margin-bottom: 0;
+                    }
+                    .time {
+                        font-size: 20px;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+    .title {
+        .content {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0;
+            .item {
+                font-size: 20px;
+                padding: 10px 20px;
+                border-radius: 8px;
+                transition: all .3s ease ;
+                a {
+                    color: #000;
+                }
+            }
+            .item.active {
+                background: rgb(3, 37, 65);
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .content {
+        .overview {
+            h1 {
+                font-size: 25px;
+            }
+            .item {
+                margin-top: 20px;
+                box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+                border: 1px solid rgba(227, 227, 227);
+                background-color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+                    .image {
+                        width: calc(200px / 1.5);
+                        min-width: calc(200px / 1.5);
+                        height: 200px;
+                        cursor: pointer;
+                    }
+                    .detail {
+                        padding: 0 15px;
+                        line-height: 25px;
+                        margin-top: 10px;
+                        .percents {
+                            margin-right: 10px;
+                            margin-top: 4px;
+                            .ant-progress-inner {
+                                font-size: 10px !important;
+                                background-color: #03142b;
+                                .ant-progress-text {
+                                    color: #fff;
+                                    font-weight: bold;
+                                }
+                                .ant-progress-circle-trail {
+                                    stroke: #03142b;
+                                }
+                                //
+                            }
+                        }
+                        .title-overview {
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #000;
+                            transition: all 0.3s ease;
+                            &:hover {
+                                color: rgba(1, 180, 228, 1);
+                            }
+                        }
+                        p {
+                            margin-bottom: 2px;
+                        }
+                        .action {
+                            .icon {
+                                margin-bottom: 20px;
+                                margin-top: 20px;
+                                display: flex;
+                                align-items: center;
+                                .favorite,
+                                .remove {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-right: 50px;
+                                    cursor: pointer;
+                                    span {
+                                        display: inline-block;
+                                        margin-right: 10px;
+                                        transition: all 0.5s ease;
+                                        color: #959595;
+                                    }
+                                    .add {
+                                        width: 30px;
+                                        height: 30px;
+                                        display: inline-flex;
+                                        border: 1px solid #959595;
+                                        justify-content: center;
+                                        align-items: center;
+                                        align-content: center;
+                                        border-radius: 50%;
+                                    }
+                                    .checked {
+                                        color: #959595;
+                                    }
+                                    .heart {
+                                        color: #fff;
+                                        border: none;
+                                        background-color: #ef47b6;
+                                    }
+                                    p {
+                                        color: #959595;
+                                        font-size: 18px;
+                                    }
+                                }
+                                .favorite:hover span {
+                                    color: #fff;
+                                    border: none;
+                                    background-color: #ef47b6;
+                                }
+                                .remove:hover span {
+                                    background-color: #959595;
+                                    border: 1px solid #959595;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ant-tabs-tab-btn{
+            font-size: 20px;
+        }
+        .ant-tabs-tab:hover{
+            color: #01d277;
+        }
+        .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+           
+            color: black;
+            text-shadow: none;
+        }
+        .ant-tabs-ink-bar.ant-tabs-ink-bar-animated{
+            background: #01d277;
+            height: 5px;
+            width: 60px!important;
+        }
+        .ant-tabs-content-holder{
+            padding: 50px 0;
+        }
+    }
+}
+
+.content-login{
+    .form{
+        .ant-col.ant-col-8.ant-form-item-label{
+            text-align: left;
+        }
+    }
+    
+}

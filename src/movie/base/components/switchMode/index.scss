@@ -1,0 +1,63 @@
+.header{
+    .color_trailers{
+        color: #fff;
+    }
+    .switch-mode {
+        position: relative;
+        background-color: #fff;
+        .selected {
+            background: palevioletred;
+            color: #000;
+            border-radius: 20px;
+            padding: 5px 40px;
+            height: 31px;
+            border: none;
+            transition: all 0.5s ease;
+            margin: 0;
+            outline: none;
+        }
+        .ant-btn:hover,
+        .ant-btn:focus {
+            // background-color: red;
+            color: #000;
+            border: none;
+        }
+        .ant-btn > span {
+            position: relative;
+            z-index:2;
+        }
+        .left-to-right {
+            position: absolute;
+            width: 57%;
+            right: 0;
+            z-index: 1;
+            background-color: palevioletred;
+            border-radius: 20px;
+            animation: leftToRight 1s ease forwards;
+        }
+    
+        .right-to-left {
+            position: absolute;
+            width: 57%;
+            left: 0;
+            z-index: 1;
+            background-color: palevioletred;
+            border-radius: 20px;
+            animation: rigthToLeft 1s ease forwards;
+        }
+        .hide {
+            display: none;
+        }
+    
+        .none {
+            background-color: white;
+            height: 31px;
+            border-radius: 20px;
+            padding: 5px 40px;
+            border: none;
+            transition: all 0.5s ease;
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+}

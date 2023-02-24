@@ -1,0 +1,67 @@
+.person {
+    padding: 50px 0;
+    .w-90 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .content {
+            display: flex;
+
+            .left {
+                .image-person {
+                    min-width: 300px;
+                    width: 300px;
+                    height: 450px;
+                    img {
+                        border-radius: 8px;
+                        width: 100%;
+                    }
+                }
+                .info {
+                    margin-top: 30px;
+                    .social_links {
+                        margin-bottom: 30px;
+                        a {
+                            color: #000;
+                            font-size: 30px;
+                            margin-right: 10px;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                    h3 {
+                        font-weight: 600;
+                        font-size: 1.3em;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        margin: 0 0 20px 0;
+                        font-size: 15px;
+                        strong {
+                            display: block;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            .right {
+                padding-left: 25px;
+                .title h2 {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                .biography {
+                    h3{
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+                .known_for{
+                    h3{
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

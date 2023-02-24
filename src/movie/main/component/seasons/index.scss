@@ -1,0 +1,175 @@
+.seasons,
+.episodes {
+    .breadcrumb {
+        background-color: rgb(57 38 38);
+        .wrapper {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            .image-poster {
+                padding: 10px;
+                img {
+                    width: 100%;
+                    height: 87px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+            .title-movie {
+                padding-left: 25px;
+                h3 {
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    span {
+                        color: #d9d9d9;
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+                }
+                a {
+                    color: #abaaaa;
+                    font-size: 17px;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.seasons {
+    .content {
+        padding: 50px 0;
+        .w-90 {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            .item {
+                margin-top: 40px;
+                border: 1px solid rgba(227, 227, 227, 1);
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+                .wrapper {
+                    display: flex;
+                    .image {
+                        min-width: 130px;
+                        width: 130px;
+                        img {
+                            width: 100%;
+                            height: 195px;
+                            object-fit: cover;
+                            cursor: pointer;
+                        }
+                    }
+                    .detail {
+                        padding: 18px 20px;
+                        width: 100%;
+                        .info-season {
+                            display: flex;
+                            align-items: center;
+                            .title-season {
+                                color: #000;
+                                font-size: 20px;
+                                font-weight: bold;
+                                transition: all 0.3s ease;
+                            }
+                            .title-season:hover {
+                                opacity: 0.6;
+                            }
+                            h4{
+                                margin-bottom: -4px;
+                                margin-left: 10px;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+.episodes {
+    .content {
+        padding: 50px 0;
+        .w-90 {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            .item {
+                margin-top: 40px;
+                border: 1px solid rgba(227, 227, 227, 1);
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+                .wrapper {
+                    display: flex;
+                    .image {
+                        min-width: 227px;
+                        width: 227px;
+                        img {
+                            width: 100%;
+                            height: 140px;
+                            object-fit: cover;
+                            cursor: pointer;
+                        }
+                    }
+                    .detail {
+                        padding: 18px 20px;
+                        width: 100%;
+                        .title-episode {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+
+                            .left {
+                                display: flex;
+                                align-items: center;
+                                line-height: 25px;
+                                h4 {
+                                    font-size: 20px;
+                                    margin-right: 10px;
+                                    margin-bottom: 0;
+                                }
+                                .rating {
+                                    padding: 4px 8px;
+                                    margin-left: 14px;
+                                    font-size: 0.9em;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background-color: #000;
+                                    border-color: #000;
+                                    border-radius: 8px;
+                                    color: #fff;
+                                }
+                                h3 {
+                                    font-size: 20px;
+                                    margin-left: 10px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                            .right {
+                                color: #666;
+                                font-size: 0.9em;
+                                p {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                        .overview {
+                            white-space: normal;
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
