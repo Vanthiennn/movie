@@ -83,7 +83,7 @@ export default function Person({handleLoading}) {
                                 <div >
                                     <p >
                                         <strong>Known For</strong>
-                                        {detailPerson && detailPerson.known_for_department ? detailPerson.known_for_department : ''}
+                                        {detailPerson && detailPerson.known_for_department ? detailPerson.known_for_department : '-'}
                                     </p>
                                     <p >
                                         <strong>Gender</strong>
@@ -91,11 +91,11 @@ export default function Person({handleLoading}) {
                                     </p>
                                     <p >
                                         <strong>Birthday</strong>
-                                        {detailPerson && detailPerson.birthday ? detailPerson.birthday : ''}
+                                        {detailPerson && detailPerson.birthday ? detailPerson.birthday : '-'}
                                     </p>
                                     <p >
                                         <strong>Place of Birth</strong>
-                                        {detailPerson && detailPerson.place_of_birth ? detailPerson.place_of_birth : ''}
+                                        {detailPerson && detailPerson.place_of_birth ? detailPerson.place_of_birth : '-'}
                                     </p>
                                     <p>
                                         <strong>Also Known As</strong>
@@ -112,7 +112,7 @@ export default function Person({handleLoading}) {
                                                         })
                                                     }
                                                 </React.Fragment>
-                                                : null
+                                                : '-'
                                         }
                                     </p>
 
