@@ -29,7 +29,7 @@ export default function MovieRoute() {
   const [getDataFromDetail, setGetDataFromDetail] = useState('')
 
   const pathname = window.location.pathname
-  console.log(pathname)
+
   
   const handleIsPlay = (e, key, data = {}) => {
     if (key) {

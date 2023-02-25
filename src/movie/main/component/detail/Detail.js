@@ -677,12 +677,12 @@ export default function Detail({ handleIsPlay }) {
             {loading ? <Loading /> :
                 <div className='main'>
                     <Helmet>
-                        <title>{detail && detail.name ? detail.name : detail.title ? detail.tile : 'Detail '}</title>
+                        <title>{ detail.title || detail.name || 'Detail'}</title>
                         <meta
                             name="description"
                             content="Detail of movie"
                         />
-                       
+
                     </Helmet>
                     <div className='background' style={{ backgroundImage: `url( ${URL_IMAGE + detail.backdrop_path})`, backgroundPosition: 'left calc((50vw - 170px) - 340px) top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                         <div className='wrapper' style={{ background: 'linear-gradient(to right, rgba(3, 37, 65, 1) calc((50vw - 170px) - 340px), rgba(3, 37, 65, 0.75) 30%, rgba(3, 37, 65, 0.75) 100%)' }}>
