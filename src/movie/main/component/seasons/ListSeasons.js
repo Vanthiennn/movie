@@ -9,6 +9,7 @@ import moment from 'moment'
 import './index.scss'
 import '../home/popular/index.scss'
 import DefaultImage from '../../static/default-thumbnail.jpg'
+import { Helmet } from 'react-helmet'
 
 const URL_IMAGE_SEASONS = 'https://image.tmdb.org/t/p/w130_and_h195_multi_faces'
 const URL_POSTER = 'https://image.tmdb.org/t/p/w58_and_h87_multi_faces'
@@ -23,6 +24,13 @@ export default function ListSeasons() {
     const yearOfMovies = detail && detail.release_date ? moment(detail.release_date).format('YYYY') : detail.first_air_date ? moment(detail.first_air_date).format('YYYY') : ''
     return (
         <React.Fragment>
+            <Helmet>
+                <title>List Seasons</title>
+                <meta
+                    name="description"
+                    content="List Seasons"
+                />
+            </Helmet>
             <div className='seasons'>
                 <div className='breadcrumb'>
                     <div className='wrapper'>

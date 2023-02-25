@@ -9,6 +9,7 @@ import moment from 'moment'
 import './index.scss'
 import '../home/popular/index.scss'
 import DefaultImage from '../../static/default-thumbnail.jpg'
+import { Helmet } from 'react-helmet'
 
 const URL_IMAGE = 'https://image.tmdb.org/t/p/w66_and_h66_multi_faces'
 const URL_POSTER = 'https://image.tmdb.org/t/p/w58_and_h87_multi_faces'
@@ -21,6 +22,13 @@ export default function FullCastAndCrew() {
     },[])
     return (
         <React.Fragment>
+             <Helmet>
+            <title>Full Cast</title>
+            <meta
+              name="description"
+              content="Full Cast"
+            />
+          </Helmet>
             <div className='fullCast'>
                 <div className='breadcrumb'>
                     <div className='wrapper'>

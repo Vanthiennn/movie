@@ -10,6 +10,7 @@ import '../seasons/index.scss'
 import '../home/popular/index.scss'
 import './index.scss'
 import DefaultImage from '../../static/default-thumbnail.jpg'
+import { Helmet } from 'react-helmet'
 const URL_POSTER = 'https://image.tmdb.org/t/p/w58_and_h87_multi_faces'
 const URL_AVATAR = 'https://image.tmdb.org/t/p/w64_and_h64_multi_faces'
 export default function Reviews() {
@@ -23,6 +24,13 @@ export default function Reviews() {
     const yearOfMovies = detail && detail.release_date ? moment(detail.release_date).format('YYYY') : detail.first_air_date ? moment(detail.first_air_date).format('YYYY') : ''
     return (
         <React.Fragment>
+            <Helmet>
+                <title>Reviews</title>
+                <meta
+                    name="description"
+                    content="Reviews"
+                />
+            </Helmet>
             <div className='seasons'>
                 <div className='breadcrumb'>
                     <div className='wrapper'>

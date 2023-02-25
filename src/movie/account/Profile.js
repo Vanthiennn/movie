@@ -10,6 +10,7 @@ import DefaultImage from '../main/static/default-thumbnail.jpg'
 import './index.scss'
 import { AiFillHeart } from '@react-icons/all-files/ai/AiFillHeart'
 import { AiOutlineClose } from '@react-icons/all-files/ai/AiOutlineClose'
+import { Helmet } from 'react-helmet'
 
 const URL_POSTER = 'https://image.tmdb.org/t/p/w150_and_h225_multi_faces'
 
@@ -247,7 +248,7 @@ const TVShows = ({ watchlist, id, favorite }) => {
 }
 
 // For My Favorites
-const MovieFavorites = ({  id, favorite }) => {
+const MovieFavorites = ({ id, favorite }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [idMovieAddFavorite, setIdMovieAddFavorite] = useState({})
@@ -291,7 +292,7 @@ const MovieFavorites = ({  id, favorite }) => {
                         const dashTitle = item.title ? item.title.replaceAll(' ', '-').replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '') :
                             item.name ? item.name.replaceAll(' ', '-').replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '') : ''
                         const findItemFavorite = favorite.movies.filter(e => e.id === item.id)
-                        
+
                         return (
                             <div className='item' key={item.id}>
                                 <div className='wrapper' >
@@ -338,13 +339,13 @@ const MovieFavorites = ({  id, favorite }) => {
     )
 }
 
-const TVShowFavorites = ({  id, favorite }) => {
+const TVShowFavorites = ({ id, favorite }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
     const [idMovieAddFavorite, setIdMovieAddFavorite] = useState({})
 
-   
+
     const handleAddToFavorite = (e) => {
         if (id) {
             const findItemFavorite = favorite.tvshow.filter(t => t.id === e.id)
@@ -417,7 +418,7 @@ const TVShowFavorites = ({  id, favorite }) => {
                                                     </span>
                                                     <p>Favorite</p>
                                                 </div>
-                                               
+
                                             </div>
                                         </div>
                                     </div>
@@ -649,47 +650,56 @@ export default function Profile() {
         }
     }, [account[state.id]])
     return (
-        <div className='profile'>
-            <div className='background_info' style={{ backgroundImage: `url(${Background})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover',backgroundAttachment:'fixed' }}>
-                <div className='wrapper'>
-                    <div className='w-90'>
-                        <div className='info'>
-                            <div className='avatar' >
-                                <p >{state.email ? state.name.charAt(0).toUpperCase() : ''}</p>
-                            </div>
-                            <div className='info-email'>
-                                <p className='email' >{info.email}</p>
-                                <p className='time' >Member since {info.createdAt ? moment(Number(info.createdAt)).format('MMMM YYYY') : ''}</p>
+        <React.Fragment>
+            <Helmet>
+                <title>Profile</title>
+                <meta
+                    name="description"
+                    content="Profile"
+                />
+            </Helmet>
+            <div className='profile'>
+                <div className='background_info' style={{ backgroundImage: `url(${Background})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}>
+                    <div className='wrapper'>
+                        <div className='w-90'>
+                            <div className='info'>
+                                <div className='avatar' >
+                                    <p >{state.email ? state.name.charAt(0).toUpperCase() : ''}</p>
+                                </div>
+                                <div className='info-email'>
+                                    <p className='email' >{info.email}</p>
+                                    <p className='time' >Member since {info.createdAt ? moment(Number(info.createdAt)).format('MMMM YYYY') : ''}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='title'>
-                <div className='content' style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid #ccc', padding: '15px 0' }} >
-                    <div className={`item ${key === 'overview' ? 'active' :''} `} >
-                        <a onClick={e => (e.preventDefault(), setKey('overview'))} >
-                            Overview
-                        </a>
-                    </div>
-                    <div className={`item  ${key === 'watchlist' ? 'active' :''} `} >
-                        <a onClick={e => (e.preventDefault(), setKey('watchlist'))} >
-                            Watchlist
-                        </a>
-                    </div>
-                    <div className={`item  ${key === 'favorite' ? 'active' :''}`} >
-                        <a onClick={e => (e.preventDefault(), setKey('favorite'))} >
-                            Favorite
-                        </a>
+                <div className='title'>
+                    <div className='content' style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid #ccc', padding: '15px 0' }} >
+                        <div className={`item ${key === 'overview' ? 'active' : ''} `} >
+                            <a onClick={e => (e.preventDefault(), setKey('overview'))} >
+                                Overview
+                            </a>
+                        </div>
+                        <div className={`item  ${key === 'watchlist' ? 'active' : ''} `} >
+                            <a onClick={e => (e.preventDefault(), setKey('watchlist'))} >
+                                Watchlist
+                            </a>
+                        </div>
+                        <div className={`item  ${key === 'favorite' ? 'active' : ''}`} >
+                            <a onClick={e => (e.preventDefault(), setKey('favorite'))} >
+                                Favorite
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div className='content' style={{ padding: '60px 0 ' }}>
+                    {key === 'overview' ? <OverView watchlist={watchlist} id={id} favorite={favorite} /> :
+                        key === 'watchlist' ? <Watchlist watchlist={watchlist} id={id} favorite={favorite} /> :
+                            key === 'favorite' ? <Favorite favorite={favorite} id={id} watchlist={watchlist} /> :
+                                `Something went wrong please try again`}
+                </div>
             </div>
-            <div className='content' style={{ padding: '60px 0 ' }}>
-                {key === 'overview' ? <OverView watchlist={watchlist} id={id} favorite={favorite}  /> :
-                    key === 'watchlist' ? <Watchlist watchlist={watchlist} id={id} favorite={favorite} /> :
-                        key === 'favorite' ? <Favorite favorite={favorite} id={id} watchlist={watchlist} /> :
-                            `Something went wrong please try again`}
-            </div>
-        </div>
+        </React.Fragment>
     )
 }

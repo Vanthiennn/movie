@@ -19,6 +19,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, warnNotification, } from "../../../../firebase/index";
 
 import * as AccountActionType from '../../../account/controllers/actionsType'
+import { Helmet } from 'react-helmet'
 
 const URL_CAST = 'https://image.tmdb.org/t/p/w138_and_h175_multi_faces'
 const URL_SEASON = 'https://image.tmdb.org/t/p/w130_and_h195_multi_faces'
@@ -582,7 +583,7 @@ export default function Detail({ handleIsPlay }) {
             }
             window.scrollTo(0, 0)
         } catch (err) {
-           
+
         }
     }, [type, ids])
 
@@ -670,11 +671,19 @@ export default function Detail({ handleIsPlay }) {
         }
     }
 
-  
+
     return (
         <React.Fragment>
             {loading ? <Loading /> :
                 <div className='main'>
+                    <Helmet>
+                        <title>{detail && detail.name ? detail.name : detail.title ? detail.tile : 'Detail '}</title>
+                        <meta
+                            name="description"
+                            content="Detail of movie"
+                        />
+                       
+                    </Helmet>
                     <div className='background' style={{ backgroundImage: `url( ${URL_IMAGE + detail.backdrop_path})`, backgroundPosition: 'left calc((50vw - 170px) - 340px) top', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                         <div className='wrapper' style={{ background: 'linear-gradient(to right, rgba(3, 37, 65, 1) calc((50vw - 170px) - 340px), rgba(3, 37, 65, 0.75) 30%, rgba(3, 37, 65, 0.75) 100%)' }}>
                             <div className='width-80' >

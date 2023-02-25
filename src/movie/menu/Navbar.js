@@ -121,7 +121,7 @@ export default function Navbar({handleGetNameFromNav}) {
                       </div>
                     </Dropdown>
                   </div>
-                  : <Button type='primary' onClick={() => navigate('/sign-in')} style={{ marginRight: 20 }}>Sign in</Button>
+                  : <a  href='/sign-in'  style={{ marginRight: 20,color:'#fff',padding:'10px 20px',borderRadius:'20px',backgroundColor:'rgb(1, 180, 228)' }}>Sign in</a>
             }
             {
               !isSearch ?

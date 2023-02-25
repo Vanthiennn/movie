@@ -17,18 +17,20 @@ import ListSeasons from './main/component/seasons/ListSeasons';
 import Episodes from './main/component/seasons/Episodes';
 import Reviews from './main/component/reviews/Reviews';
 import PageNotFound from './base/components/pageNotFound/PageNotFound';
-
+import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
 const { Content, Footer } = Layout
 
 export default function MovieRoute() {
 
   const [isPlay, setIsPlay] = useState(false)
   const [videoId, setVideoId] = useState('')
-  const [name,setName] = useState('')
+  const [name, setName] = useState('')
   const [getDataFromDetail, setGetDataFromDetail] = useState('')
 
-
-
+  const pathname = window.location.pathname
+  console.log(pathname)
+  
   const handleIsPlay = (e, key, data = {}) => {
     if (key) {
       setVideoId(key)
@@ -38,7 +40,7 @@ export default function MovieRoute() {
   }
 
   const handleGetNameFromNav = (e) => {
-    if(e){
+    if (e) {
       setName(e)
     }
   }
@@ -47,6 +49,13 @@ export default function MovieRoute() {
     <React.Fragment>
       <Router>
         <div className='route'>
+          <Helmet>
+            <title>Movie</title>
+            <meta
+              name="description"
+              content="Movie"
+            />
+          </Helmet>
           <Layout style={{ minHeight: '100vh', position: 'relative' }}>
             {
               isPlay ?
@@ -160,9 +169,12 @@ export default function MovieRoute() {
 
               </Content>
             </Layout>
-            <Footer style={{ backgroundColor: 'rgb(3, 37, 65)',overflow:'hidden' }} >
-              <FooterMovie name={name} />
-            </Footer>
+            {
+              pathname === '/sign-up'|| pathname === '/sign-in' ? null :
+                <Footer style={{ backgroundColor: 'rgb(3, 37, 65)', overflow: 'hidden' }} >
+                  <FooterMovie name={name} />
+                </Footer>
+            }
           </Layout>
         </div>
       </Router>
