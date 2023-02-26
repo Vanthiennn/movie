@@ -44,7 +44,7 @@ export default function Register() {
                             />
 
                         </Helmet>
-                        <div style={{ position: 'absolute', background: 'linear-gradient(to right, rgba(3,37,65, 0.75) 0%, rgba(3,37,65, 0.75) 100%)', width: '100%', heigth: '100%' }}>
+                        <div style={{ position: 'absolute', background: 'linear-gradient(to right, rgba(3,37,65, 0.75) 0%, rgba(3,37,65, 0.75) 100%)', width: '100%', height: '100%' }}>
                             <div className='background' style={{ opacity: 0.5, height: '100%' }}>
                                 <img src={Background} alt='Background Login' style={{ width: '100%', height: '100%' }} />
                             </div>
